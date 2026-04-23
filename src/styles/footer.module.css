@@ -1,0 +1,7 @@
+.footer {
+  @scope {
+    p {
+      color: #d20000;
+    }
+  }
+}

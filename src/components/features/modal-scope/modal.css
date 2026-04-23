@@ -1,0 +1,56 @@
+.modal-scope {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    overlay 0.3s allow-discrete,
+    display 0.3s allow-discrete;
+
+  .body {
+    background-color: #fff;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .body > button {
+    position: absolute;
+    top: -0.5rem;
+    right: -0.5rem;
+  }
+}
+
+.modal-scope::backdrop {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(3px);
+  transition:
+    background-color 0.3s,
+    overlay 0.3s allow-discrete,
+    display 0.3s allow-discrete;
+}
+
+.modal-scope[open] {
+  opacity: 1;
+}
+
+.modal-scope[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+@starting-style {
+  .modal-scope[open] {
+    opacity: 0;
+  }
+
+  .modal-scope[open]::backdrop {
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-scope,
+  .modal-scope::backdrop {
+    transition: none;
+  }
+}

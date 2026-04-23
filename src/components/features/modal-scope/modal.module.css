@@ -1,0 +1,9 @@
+dialog#modalDialogScope {
+  background-color: transparent;
+  border: none;
+  /* opacity: 0; */
+}
+
+dialog#modalDialog::backdrop {
+  backdrop-filter: blur(5px);
+}

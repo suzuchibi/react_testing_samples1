@@ -1,0 +1,42 @@
+name: Code Check
+
+on:
+  pull_request:
+    branches:
+      - main # Specify the branch you want to check PRs against PRをチェックするブランチを指定します
+  # You can also add 'push' if you want checks on every push
+  push:
+    branches:
+      - main
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  Code-Check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Use the latest version of checkout action
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4 # Use the latest version of setup-node action
+        with:
+          node-version: '22.x' # Specify the appropriate Node.js version
+          cache: 'npm' # Enables caching for faster dependency installation
+          cache-dependency-path: package-lock.json
+
+      - name: Install Dependencies
+        run: npm ci
+        # working-directory: frontend
+
+      - name: Run ESLint
+        run: npm run lint
+        # working-directory: frontend
+
+      - name: Run Prettier Check
+        run: npm run format
+        # working-directory: frontend
+
+      # - name: Run Vitest
+      #  run: npm run vitest

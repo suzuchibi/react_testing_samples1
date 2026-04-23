@@ -1,4 +1,4 @@
-# Port React 練習用
+# React テスト サンプル
 
 Node Version 22.22.2
 

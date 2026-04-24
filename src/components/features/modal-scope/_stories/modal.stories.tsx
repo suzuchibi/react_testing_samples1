@@ -45,7 +45,7 @@ const BaseHtml = ({ handleOpen }: { handleOpen: () => void }) => {
 // }
 
 const meta: Meta<typeof Modal> = {
-  title: 'Features/ModalScope',
+  title: 'Features/ModalScopeStyle',
   component: Modal,
   tags: ['autodocs'],
   parameters: {
@@ -74,6 +74,7 @@ export default meta
 type Story = StoryObj<typeof Modal>
 
 export const Default: Story = {
+  name: '1. 初期状態',
   render: () => (
     <>
       <h1>Modal Title</h1>
@@ -94,6 +95,7 @@ export const Default: Story = {
 }
 
 export const ClickAction: Story = {
+  name: '2. クリックアクション',
   render: Default.render,
   play: async (context) => {
     const canvas = within(context.canvasElement)

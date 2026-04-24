@@ -1,6 +1,13 @@
 # React テスト サンプル
 
-Node Version 22.22.2
+| Node |
+| --- |
+| v22.22.2 |
+
+- Vitest
+- Storybook
+- Chromatic
+- Playwrite
 
 # React + TypeScript + Vite
 

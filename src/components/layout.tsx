@@ -28,6 +28,9 @@ function Layout({ children }: { children: ReactNode }) {
             <li>
               <Link to="/modal_styled">Modal Styled</Link>
             </li>
+            <li>
+              <Link to="/react_hook_form">React Hook Form</Link>
+            </li>
           </ul>
         </nav>
       </footer>

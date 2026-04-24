@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import Root from './pages/root.tsx'
 import Modal from './pages/modal.tsx'
 import ModalStyled from './pages/modal-styled.tsx'
+import ReactHookFormPage from './pages/react-hook-form.tsx'
 import './styles/global.css'
 
 createRoot(document.getElementById('root')!).render(
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<Root />} />
         <Route path="/modal" element={<Modal />} />
         <Route path="/modal_styled" element={<ModalStyled />} />
+        <Route path="/react_hook_form" element={<ReactHookFormPage />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,

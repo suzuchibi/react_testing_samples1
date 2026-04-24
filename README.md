@@ -9,6 +9,18 @@
 - Chromatic
 - Playwrite
 
+## ユニットテスト
+Vitestを使用。ユーティリティテスト・カスタムフックテストを行う。
+
+## インタラクションテスト
+Storybookを使用
+
+## ビジュアル・イグニッションテスト
+画像回帰テスト。Chromaticを使用。
+
+## E2Eテスト
+Playwriteを使用。
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -7,7 +7,7 @@
 - Vitest
 - Storybook
 - Chromatic
-- Playwrite
+- Playwright
 
 ## ユニットテスト
 Vitestを使用。ユーティリティテスト・カスタムフックテストを行う。
@@ -19,7 +19,7 @@ Storybookを使用
 画像回帰テスト。Chromaticを使用。
 
 ## E2Eテスト
-Playwriteを使用。
+Playwrightを使用。
 
 # React + TypeScript + Vite
 

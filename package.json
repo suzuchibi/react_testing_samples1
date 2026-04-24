@@ -21,7 +21,8 @@
     "react-dom": "^19.2.4",
     "react-hook-form": "^7.73.1",
     "react-router": "^7.14.1",
-    "styled-components": "^6.4.0"
+    "styled-components": "^6.4.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@babel/core": "^7.29.0",

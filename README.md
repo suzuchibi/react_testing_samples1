@@ -21,6 +21,48 @@ Storybookを使用
 ## E2Eテスト
 Playwrightを使用。
 
+### First Init
+```sh
+npm init playwright@latest
+```
+```sh
+Getting started with writing end-to-end tests with Playwright:
+Initializing project in '.'
+✔ Where to put your end-to-end tests? · tests
+✔ Add a GitHub Actions workflow? (Y/n) · true
+✔ Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) · true
+
+Writing playwright.config.ts.
+Writing .github/workflows/playwright.yml.
+Writing tests/example.spec.ts.
+Writing package.json.
+```
+
+### Playwright Browsers
+```sh
+npx playwright install
+```
+```sh
+npx playwright install chromium
+```
+```sh
+npx playwright install firefox
+```
+```sh
+npx playwright install webkit
+```
+
+### Playwright Command Examples
+```sh
+npx playwright test
+```
+```sh
+npx playwright test --project=chromium
+```
+```sh
+npx playwright test --ui --project=chromium
+```
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

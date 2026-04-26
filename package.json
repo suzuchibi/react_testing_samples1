@@ -12,7 +12,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "vitest": "vitest run"
+    "vitest": "vitest run",
+    "cy:open": "cypress open"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -43,6 +44,7 @@
     "@vitest/browser-playwright": "^4.1.4",
     "@vitest/coverage-v8": "^4.1.4",
     "babel-plugin-react-compiler": "^1.0.0",
+    "cypress": "^15.14.1",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.0.1",

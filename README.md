@@ -115,6 +115,9 @@ npx playwright test --project=chromium
 npx playwright test --ui --project=chromium
 ```
 
+## 参考
+[React + Storybook + Chromatic + GitHub Actions でUIの見た目を守る！CI付き導入ガイド](https://zenn.dev/kogepan159/articles/899b155519246b)
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

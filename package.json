@@ -14,7 +14,7 @@
     "build-storybook": "storybook build",
     "vitest": "vitest run",
     "cy:open": "cypress open",
-    "chromatic": "dotenv -e .env -- npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "dotenv -e .env -- npx chromatic --delay=3000 --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

@@ -42,14 +42,15 @@ You can then remove the --project-token from your package.json script.
 CHROMATIC_PROJECT_TOKEN=project-token
 ```
 ### Chromatic （Localで実行）
-scriptsで環境変数を参照
+scriptsで環境変数を参照。  
+`--delay=3000` <- フォント読み込み待ちのため追加
 ```sh
 npm install dotenv-cli --save-dev
 ```
 ```json
   "scripts": {
     "dev": "vite",
-    "chromatic": "dotenv -e .env -- npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "dotenv -e .env -- npx chromatic --delay=3000 --project-token=$CHROMATIC_PROJECT_TOKEN"
   }
 ```
 

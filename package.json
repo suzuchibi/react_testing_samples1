@@ -45,6 +45,7 @@
     "@vitest/browser-playwright": "^4.1.4",
     "@vitest/coverage-v8": "^4.1.4",
     "babel-plugin-react-compiler": "^1.0.0",
+    "chromatic": "^16.6.0",
     "cypress": "^15.14.1",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",

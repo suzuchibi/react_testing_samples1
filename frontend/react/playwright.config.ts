@@ -23,6 +23,15 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
+
+  /* ビジュアルレグレッションテスト用のスナップショット設定 */
+  expect: {
+    toHaveScreenshot: {
+      threshold: 0.2, // 差分許容（好みで調整OK）
+      animations: 'disabled',
+    },
+  },
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -30,6 +39,12 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+
+    // Visual regression用の設定
+    screenshot: 'only-on-failure',
+    // Visual regression用の設定。安定化（重要）
+    viewport: { width: 1280, height: 720 },
+    ignoreHTTPSErrors: true,
   },
 
   /* Configure projects for major browsers */

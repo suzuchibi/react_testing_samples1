@@ -24,19 +24,19 @@ jobs:
         with:
           node-version: '22.x' # Specify the appropriate Node.js version
           cache: 'npm' # Enables caching for faster dependency installation
-          cache-dependency-path: package-lock.json
+          cache-dependency-path: frontend/react/package-lock.json
 
       - name: Install Dependencies
         run: npm ci
-        # working-directory: frontend
+        working-directory: frontend/react
 
       - name: Run ESLint
         run: npm run lint
-        # working-directory: frontend
+        working-directory: frontend/react
 
       - name: Run Prettier Check
         run: npm run format
-        # working-directory: frontend
+        working-directory: frontend/react
 
       # - name: Run Vitest
       #  run: npm run vitest

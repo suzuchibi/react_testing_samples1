@@ -22,5 +22,6 @@ jobs:
           node-version: 20
 
       - run: npm ci
-
+        working-directory: frontend/react
       - run: npx chromatic --delay=3000 --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        working-directory: frontend/react

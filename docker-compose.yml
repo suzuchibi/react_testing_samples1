@@ -1,0 +1,21 @@
+
+services:
+  testing_react1:
+    build:
+      context: "./frontend"
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173" # react
+      - "6006:6006" # storybook
+    tty: true
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: true
+      # APP_MODE: "dev"
+    volumes:
+      - ./frontend/react:/react
+      - testing_react1_node_modules:/react/node_modules
+
+volumes:
+  testing_react1_node_modules:
+

@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   chromatic:
     runs-on: ubuntu-latest
@@ -14,8 +17,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
-      - run: npm install
+      - run: npm ci
 
       - run: npx chromatic --delay=3000 --project-token=${{ secrets.CHROMATIC_PROJECT_TOKEN }}
